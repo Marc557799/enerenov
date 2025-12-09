@@ -40,8 +40,8 @@ wp-config.php
 
 # Uploads, cache, backups
 !wp-content/uploads/
-!wp-content/uploads/..
+!wp-content/uploads/**
 !wp-content/uploads/elementor/
-!wp-content/uploads/elementor/..
+!wp-content/uploads/elementor/**
 !wp-content/uploads/elementor/google-fonts/
 !wp-content/uploads/elementor/google-fonts/**
