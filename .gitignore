@@ -1,48 +1,47 @@
-# Wordpress - ignore core, configuration, examples, uploads and logs.
-# https://github.com/github/gitignore/blob/main/WordPress.gitignore
+# Ignore everything by default
+*
 
-# Core
-#
-# Note: if you want to stage/commit WP core files
-# you can delete this whole section/until Configuration.
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
+# Always track the gitignore itself
+!.gitignore
+!README.md
 
-# Configuration
+# Allow the path down to the theme files
+!wp-content/
+!wp-content/themes/
+!wp-content/themes/hello-elementor/
+!wp-content/themes/hello-elementor/**
+!wp-content/themes/hello-elementor-child/
+!wp-content/themes/hello-elementor-child/**
+!wp-content/themes/hello-theme-child-master/
+!wp-content/themes/hello-theme-child-master/**
+
+# Allow the path down to the plugin files
+!wp-content/plugins/
+!wp-content/plugins/elementor/
+!wp-content/plugins/elementor/**
+!wp-content/plugins/elementor-pro/
+!wp-content/plugins/elementor-pro/**
+
+!config/
+!config/**
+
+
+# Ignore Node deps inside all plugins
+wp-content/plugins/**/node_modules/
+
+# Ignore macOS metadata everywhere
+.DS_Store
+
+# WordPress stuff you don’t want
 wp-config.php
+*.sql
+*.zip
+*.tar.gz
 
-# Example themes
-/wp-content/themes/twenty*/
-
-# Example plugin
-/wp-content/plugins/hello.php
-
-# Uploads
-/wp-content/uploads/
-
-# Log files
-*.log
-
-# htaccess
-/.htaccess
-
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
-
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
+# Uploads, cache, backups
+!wp-content/uploads/
+!wp-content/uploads/..
+!wp-content/uploads/elementor/
+!wp-content/uploads/elementor/..
+!wp-content/uploads/elementor/google-fonts/
+!wp-content/uploads/elementor/google-fonts/**
